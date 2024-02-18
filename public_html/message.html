@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(background-3138516_1920.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+
+        }
+
+        .topnav a {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .active1:hover {
+            background-color: #394139;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .dropdown {
+            float: right;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #555;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .topnav a:not(:first-child),
+            .dropdown .dropbtn {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdown-content {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+
+            .logo-name {
+                display: block;
+
+
+            }
+        }
+
+        .logo {
+            float: left;
+            padding: 0%;
+
+        }
+
+        #btnn {
+            color: #fbfcfd;
+            padding: 10px 25px;
+            background: rgb(48, 160, 241);
+            border-radius: 20px;
+            outline: none;
+            text-decoration: none;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+
+            bottom: 0;
+            width: 100%;
+
+
+        }
+
+
+        #toggle-button {
+            background-color: rgb(20, 165, 209);
+            color: white;
+            border: none;
+            margin: 20px;
+            padding: 15px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #toggle-button:hover {
+            background-color: rgba(20, 165, 209, 0.81);
+
+        }
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+            color: black;
+            max-width: 1000px;
+
+
+
+
+        }
+
+        img {
+
+
+            margin-bottom: 10px;
+            width: 300px;
+            height: 200px;
+            border-radius: 30px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 20px;
+            font-size: 25px;
+        }
+
+        h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 25px;
+        }
+    </style>
+    <style>
+        .container {
+            max-width: 100%;
+            display: flex;
+
+            align-items: center;
+        }
+
+
+
+
+        @media screen and (max-width: 768px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .content h3 {
+                font-size: 20px;
+            }
+
+            
+
+            
+
+            p {
+                font-size: 15px;
+            
+
+
+
+            }
+
+
+
+        }
+        .eng{
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="eng">
+   
+    <div class="topnav" id="myTopnav">
+        <a href="registrationpage.html" class="active1"
+        
+            style="background-color: #04AA6D; border-radius: 8px;">Registration</a>
+            <div class="dropdown">
+                <button class="dropbtn">More
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="message.html">Message</a>
+                  <a href="Sangam2023 Final Brochure.pdf" download id="download-button">
+                    Brochure
+                  </a>
+                  <a href="Gallery.html">Gallery</a>
+                </div>
+              </div>
+        <a href="about.html">about</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Events
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="cultural.html">Cultural Event</a>
+                <a href="SportsEvent.html">sports events</a>
+                <a href="technical.html">Technical Event</a>
+            </div>
+        </div>
+        <a href="index.html">Home</a>
+        <div class="logo">
+
+            <a href="" class="logo-name">
+                <h3 style="margin-top: -2px; ">DPGITM</h3>
+            </a>
+            <!-- <a href=""><img src="dpg.webp" alt="" style="height: 30pxpx; width:50px"></a> -->
+        </div>
+
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+    </div>
+    <center>
+        <div class="container">
+            <img src="rc.jpg" alt="">
+            <div class="content">
+                <h3 > Professor R C Kuhad </h3>
+                <h3 >(FAMSC, FNASc, FNAAS, FBRSI)</h3>
+                <h3 > DIRECTOR </h3>
+            </div>
+        </div>
+    </center>
+    <center>
+        <h1>MESSAGE</h1>
+    </center>
+    <center>
+        <p>
+            First of all it’s a matter of pleasure to be part of this grand endeavour on part of DPGITM. It’s
+            my first event in the institute and remarkable to see the enthusiasm of staff and students with which they
+            are
+            planning, preparing and executing it. <br>
+
+            There is abundance of sports, technology, literary and cultural activities. This time of the
+            year, students attain an opportunity to showcase their talents besides academic rigour. <br>
+
+            Annual function, titled as ‘SANGAM’, the event symbolises a coming together of collaborative
+            efforts towards making it a success. I am sure that all the students would participate and liven up the
+            spirit
+            of the fest.
+            My best wishes to the students and staff for its accomplishment.
+
+        </p>
+    </center>
+    <div id="sign">
+        <img src="s-removebg-preview.png" alt="">
+
+        <h4>R.C. Kuhad</h4>
+        <h4>DIRECTOR</h4>
+    </div>
+    <style>
+        #sign img{height: 100px;
+            width: 200px;
+
+        }
+        #sign{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+
+    </style>
+</div>
+<hr>
+<div class="eng">
+   
+   
+    <center>
+        <div class="container">
+            <img src="rc.jpg" alt="">
+            <div class="content">
+                <h3 > प्रोफेसर आर. सी. कुहाड़ </h3>
+                <h3 >(FAMSC, FNASc, FNAAS, FBRSI)</h3>
+                <h3 >निर्देशक </h3>
+            </div>
+        </div>
+    </center>
+    <center>
+        <h1>सन्देश</h1>
+    </center>
+    <center>
+        <p>
+            सबसे पहले DPGITM की ओर से इस भव्य प्रयास का हिस्सा बनना मेरे लिए प्रसन्नता का विषय है। इस संस्थान में
+                यह मेरा पहला कार्यक्रम है। कर्मचारीगण और छात्र जिस उत्साह के साथ इसकी योजना बना रहे हैं, तैयार कर रहे हैं और इसे
+                क्रियान्वित कर रहे हैं। वह उल्लेखनीय है। यहाँ ज्ञान, विज्ञान, अनुसंधान प्रौद्योगिकी, साहित्यिक और सांस्कृतिक
+                गतिविधियों की प्रचुरता है। वर्ष के इस समय छात्रों को शैक्षणिक गतिविधियों के अलावा अपनी प्रतिभा दिखाने का अवसर
+                प्राप्त होता है। <br>
+        
+                वार्षिक समारोह, जिसका शीर्षक 'संगम' है, यह आयोजन इसे सफल बनाने की दिशा में सहयोगी प्रयासों के एक साथ आने का
+                प्रतीक है। मुझे विश्वास है सभी छात्र भाग लेंगे और उत्सव की भावना को जीवंत करेंगे। इसकी उपलब्धि के लिए छात्रों और
+                कर्मचारियों को मेरी शुभकामनाएं।
+
+        </p>
+    </center>
+    <div id="sign2">
+        <img src="s-removebg-preview.png" alt="">
+
+        <h4>R.C. Kuhad</h4>
+        <h4>DIRECTOR</h4>
+    </div>
+    <style>
+        #sign2 img{height: 100px;
+            width: 200px;
+
+        }
+        #sign2{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+
+    </style>
+</div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="tylesheet">
+   <style>
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      padding: 3px;
+    }
+  
+    .topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+  
+    .active1:hover {
+      background-color: #394139;
+      color: white;
+    }
+  
+    .topnav .icon {
+      display: none;
+    }
+  
+    .dropdown {
+      float: right;
+      overflow: hidden;
+    }
+  
+    .dropdown .dropbtn {
+      font-size: 17px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+  
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+  
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+  
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #5555556c;
+      color: white;
+    }
+  
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  
+    @media screen and (max-width: 600px) {
+  
+      .topnav a:not(:first-child),
+      .dropdown .dropbtn {
+        display: none;
+      }
+  
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+  
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+  
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+  
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+  
+      .topnav.responsive .dropdown {
+        float: none;
+      }
+  
+      .topnav.responsive .dropdown-content {
+        position: relative;
+      }
+  
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+  
+      .logo-name {
+        display: block;
+        visibility: hidden;
+  
+      }
+    }
+  
+    .logo {
+      float: left;
+      padding: 0%;
+  
+    }
+    #btnn{
+      color:#fbfcfd;
+      padding:10px 25px;
+      background:rgb(48, 160, 241);
+      border-radius:20px;
+      outline:none;
+      text-decoration: none;
+      list-style: none;
+      cursor:pointer;
+  }
+  </style>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="registrationpage.html" class="active1" style="background-color: #04AA6D; border-radius:6px">Registration</a>
+        <div class="dropdown">
+          <button class="dropbtn">More
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="message.html">Message</a>
+            <a href="Sangam2023 Final Brochure.pdf" download id="download-button">
+              Brochure
+            </a>
+            <a href="Gallery.html">Gallery</a>
+          </div>
+        </div>
+    <script>
+      //           const downloadButton = document.getElementById('download-button');
+
+      // downloadButton.addEventListener('click', () => {
+      //   ga('send', 'event', 'Downloads', 'Download PDF', 'Example PDF');
+      // });
+
+      var downloadLink = document.getElementById('download-button');
+
+      downloadLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        var pdfUrl = 'Sangam2023 Final Brochure.pdf';
+        window.location.href = pdfUrl;
+      });
+    </script>
+    <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    
+        <div class="dropdown">
+          <button class="dropbtn">Events
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="cultural.html">Cultural Event</a>
+            <a href="SportsEvent.html">Sports Events</a>
+            <a href="technical.html">Technical Event</a>
+          </div>
+        </div>
+        <a href="index.html">Home</a>
+        <div class="logo">
+          <a href="https://www.dpgitm.ac.in/" class="logo-name">DPGITM</a>
+        </div>
+    
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+    <div class="grid md:block ">
+        <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-72 flex justify-center w-full">
+            <div class="mt-10 text-white text-4xl font-bold">CONTACT US</div>
+        </div>
+        <div class="bg-white h-auto flex justify-center">
+            <div class="bg-white shadow-lg -mt-40 md:w-1/2 grid lg:flex justify-center">
+                <div class="w-3/4 lg:w-2/3 ">
+                    <div class="text-lg font-medium text-blue-600 m-6 ">Drop a Message</div>
+                    <div class=" flex lg:flex-row flex-col">
+                        <div class="m-6">
+                            <p class="text-sm text-stone-400" >Full Name</p> <input
+                                class="border-b-2 border-stone-400 text-stone-400 w-36" id="name"/>
+                            <p class="text-sm text-stone-400 mt-6">E-mail</p> <input
+                                class="border-b-2 border-stone-400 text-stone-400 w-36" id="email"/>
+                        </div>
+                        <div class="m-6 ">
+                            <p class="text-sm text-stone-400" >Phone</p> <input
+                                class="border-b-2 border-stone-400 text-stone-400 w-36" id="phone_number" />
+                            <p class="text-sm text-stone-400 mt-6" >Subject</p> <input
+                                class="border-b-2 border-stone-400 text-stone-400 w-36" id="subject"/>
+                        </div>
+                    </div>
+                    <div class="m-6 ">
+                        <p class="text-sm text-stone-400 mt-6" >Message</p> <input
+                            class="border-b-2 border-stone-400 text-stone-400 w-36" id="message"/>
+                        <div
+                            class="m-4 mt-6 pl-4 pt-1 pb-1 pr-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl text-white font-medium w-36 " id="submit">
+                            Send Message</div>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 bg-green-500 ">
+                    <div class="text-white m-6 font-medium"> Contact Information </div>
+                    <div class="text-white m-6 text-sm flex">
+                        <ion-icon name="location-sharp" class="m-2"></ion-icon>
+                        <div>Sector - 34, Gurgaon</div>
+                    </div>
+                    <div class="text-white m-6 text-sm flex">
+                        <ion-icon name="call-outline" class="m-2"></ion-icon>
+                        <div>+91-97186 27777</div>
+                    </div>
+                    <div class="text-white m-6 text-sm flex">
+                        <ion-icon name="mail-outline" class="m-2"></ion-icon>
+                        <div>info@dpgitm.ac.in</div>
+                    </div>
+                    <div class="text-white m-6 text-sm flex">
+                        <ion-icon name="globe-outline" class="m-2"></ion-icon>
+                        <div>www.dpgitm.ac.in/</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+            $("#submit").on(
+                "click",
+                function (e) {
+                  let name = $("#name").val();
+                  let email = $("#email").val();
+                  let phone_number = $("#phone_number").val();
+                  let subject = $("#subject").val();
+                  let message = $("#message").val();
+
+                  formData = {name, email, phone_number, subject, message};
+                  $.ajax({
+                    type: 'post',
+                    url: 'https://api.sangam2023.org/send_message',
+                    data: JSON.stringify(formData),
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    success: function (data) {
+                      alert(data.msg);
+                    }
+                  });
+                  e.preventDefault();
+                }
+              )
+              function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+        </script>
+</body>
+</html>

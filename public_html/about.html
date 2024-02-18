@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About page</title>
+  <link rel="stylesheet" href="vivek_style.css">
+  <style>
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      padding: 3px;
+    }
+  
+    .topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+  
+    .active1:hover {
+      background-color: #394139;
+      color: white;
+    }
+  
+    .topnav .icon {
+      display: none;
+    }
+  
+    .dropdown {
+      float: right;
+      overflow: hidden;
+    }
+  
+    .dropdown .dropbtn {
+      font-size: 17px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+  
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+  
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+  
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #555;
+      color: white;
+    }
+  
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  
+    @media screen and (max-width: 600px) {
+  
+      .topnav a:not(:first-child),
+      .dropdown .dropbtn {
+        display: none;
+      }
+  
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+  
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+  
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+  
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+  
+      .topnav.responsive .dropdown {
+        float: none;
+      }
+  
+      .topnav.responsive .dropdown-content {
+        position: relative;
+      }
+  
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+  
+      .logo-name {
+        display: block;
+        visibility: hidden;
+  
+      }
+    }
+  
+    .logo {
+      float: left;
+      padding: 0%;
+  
+    }
+    #btnn{
+      color:#fbfcfd;
+      padding:10px 25px;
+      background:rgb(48, 160, 241);
+      border-radius:20px;
+      outline:none;
+      text-decoration: none;
+      list-style: none;
+      cursor:pointer;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="registrationpage.html" class="active1" style="background-color: #04AA6D; border-radius:6px">Registration</a>
+    <div class="dropdown">
+      <button class="dropbtn">More
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="message.html">Message</a>
+        <a href="Sangam2023 Final Brochure.pdf" download id="download-button">
+          Brochure
+        </a>
+        <a href="Gallery.html">Gallery</a>
+      </div>
+    </div>
+    
+    <script>
+      //           const downloadButton = document.getElementById('download-button');
+
+      // downloadButton.addEventListener('click', () => {
+      //   ga('send', 'event', 'Downloads', 'Download PDF', 'Example PDF');
+      // });
+
+      var downloadLink = document.getElementById('download-button');
+
+      downloadLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        var pdfUrl = 'Sangam2023 Final Brochure.pdf';
+        window.location.href = pdfUrl;
+      });
+
+
+
+    </script><a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Events
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="cultural.html">Cultural Event</a>
+        <a href="SportsEvent.html">sports events</a>
+        <a href="technical.html">Technical Event</a>
+      </div>
+    </div>
+    <a href="index.html">Home</a>
+    <div class="logo">
+      <a href="https://www.dpgitm.ac.in/" class="logo-name">DPGITM</a>
+    </div>
+
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  <div class="wrapper">
+    <h1>About Us</h1>
+    <h2>Welcome to SANGAM 2023,<br> DPG Institute of Technology and Management is approved by AICTE , Ministry of HRD, Govt. of India; Director of Technical Education, Govt. of Haryana and Affiliated to MD University, Rohtak. The Governing body of the Institutes comprise of Entrepreneurs, Industrialists, Academicians and Professionals who have achieved much success in their respective fields.</h2>
+
+    <div class="team">
+      <div class="team_member">
+        <div class="team_img">
+          <img src="chairman.jpg" alt="Chairman_image">
+        </div>
+        <h3>Sh. Gopi Chand Gahlot</h3>
+        <!-- <h4>(Chairman)</h4> -->
+        <p class="role">Chairman</p>
+        <p>DPG Institute of Technology and Management has become one of the premier institutes of Technology &
+          Management par excellence in the region. The enormous and commendable achievements of the institute
+          have made its existence acutely felt under “Chaudhary Partap Singh Memorial Trust (Regd.)</p>
+        </div>
+        <div class="team_member">
+          <div class="team_img">
+            <img src="23.jpg" alt="GS_image">
+          </div>
+          <h3>Adv. Surender Gahlot</h3>
+          <p class="role">General Secretary</p>
+          <p> The General Secretary of a DPGITM is an administrative position he manage the day-to-day operations of the
+            college. He work closely with the Vice-Chancellor, senior management team, and other administrative officials
+            to develop and implement policies and programs that promote the college mission and goals.
+          </p>
+      </div>
+      <div class="team_member">
+        <div class="team_img">
+          <img src="managing director.jpg" alt="MD_image">
+        </div>
+        <h3>Dr. Preeti Gahlot</h3>
+        <!-- <h4>(Managing Director)</h4> -->
+        <p class="role">Managing Director</p>
+        <p>The primary aim is to provide material to carry out a balance between studies & technology best
+          suited to present conditions and enable the students to compete in the international arena. A book
+          bank scheme is implemented to help students to obtain the latest books free of cost by depositing a
+          nominal security refundable on completion of their studies</p>
+      </div>
+      <div class="team_member">
+        <div class="team_img">
+          <img src="Director.jpg" alt="Director_image">
+        </div>
+        <h3>Professor R C Kuhad</h3>
+        <!-- <h4>(Director)</h4> -->
+
+        <p class="role">Director</p>
+        <p> “I do not follow where the path may lead, go instead where there is no path and leave a trail.”
+
+          We at DPGITM focus on providing innovating ideas and application of knowledge for preparing students
+          to take up Challenges for future. We are going to be exposed to very fast changes in the
+          technological development and innovations of science
+
+        </p>
+      </div>
+      <div class="team_member">
+        <div class="team_img">
+          <img src="registrar.jpg" alt="registrar_image">
+        </div>
+        <h3>ProfessorT R Narula</h3>
+        <!-- <h4>Registrar</h4> -->
+        <p class="role">Registerar</p>
+        <p>He plays a critical role in ensuring the academic success of students and the smooth operation of an
+          educational institution. Their work is essential for maintaining the integrity and reputation of the
+          institution and ensuring that students receive a high-quality education.
+
+        </p>
+     
+        <!--  </div>
+    <div class="team_member">
+      <div class="team_img">
+        <img src="Lemon Race.jpg" alt="Team_image">
+      </div>
+      <h3>Lemon Race</h3>
+      <p class="role">Register</p>
+      <p>The lemon race is a fun and quirky event that requires participants to balance a lemon on a spoon while racing to the finish line. It's an event that's sure to put a smile on your face.
+
+      </p>
+    </div>
+    <div class="team_member">
+      <div class="team_img">
+        <img src="Balloon Bursting.jpg" alt="Team_image">
+      </div>
+      <h3>Balloon Bursting</h3>
+      <p class="role">Register</p>
+      <p> The balloon bursting event is a fun-filled event that requires participants to pop as many balloons as they can within a given time frame. It's a challenging event that's sure to test your accuracy and speed.
+       </p>
+    </div>
+    <div class="team_member">
+      <div class="team_img">
+        <img src="Musical Chair.webp" alt="Team_image">
+      </div>
+      <h3>Musical Chair</h3>
+      <p class="role">Register</p>
+      <p>The musical chair is a classic game that's been around for generations. Watch as participants race around a set of chairs and try to find a seat before the music stops.</p>
+    </div>
+    <div class="team_member">
+      <div class="team_img">
+        <img src="discus throw.png" alt="Team_image">
+      </div>
+      <h3>Discus Throw</h3>
+      <p class="role">Register</p>
+      <p>The discus throw is a sport that requires both strength and technique. Watch as athletes hurl a heavy discus and try to achieve the maximum distance. It's an impressive event that's not to be missed.</p></div>
+    <div class="team_member">
+      <div class="team_img">
+        <img src="long jump.jpg" alt="Team_image">
+      </div>
+      <h3>Long Jump</h3>
+      <p class="role">Register</p>
+      <p>The long jump is an event that requires both skill and athleticism. Watch as athletes leap into the air and try to jump as far as they can. It's a fascinating event that's sure to leave you in awe.
+
+      </p> -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>More about Event</h3>
+          <p>So come on down to SANGAM 2023 and experience the thrill of these exciting events for yourself. There's
+            something for everyone, whether you're a professional athlete or just looking for a bit of
+            fun. See you there
+          </p>
+        </div>
+        <div class="col">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registrationpage.html">Registration</a></li>
+            <li><a href="cultural.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Address</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i>Near Hero Honda,Behind Marble
+              Market,Sector–34,Gurgaon–(Delhi-NCR),Haryana, India 122004.</li>
+            <li><i class="fas fa-phone"></i>+91-9211726982</li>
+            <li><i class="fas fa-envelope"></i>info@dpgitm.ac.in</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Follow Us</h3>
+          <ul class="ul1">
+            <li>
+              <a href="https://www.facebook.com/people/Sangam-Fest/pfbid02fGNjH9D8DdcKbZFpLAHsvvuDmvZtJcNQFGwBTSJovxKNK8vPacssJAkndURsRBWul/?mibextid=ZbWKwL">
+                <b class="fab fa-facebook-f icon">Facebook</b> </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Sangam2023?t=2MwwTbi86yDE6kh4l107WA&s=08"><b class="fab fa-twitter icon">Twitter</b></a>
+            </li>
+            <li>
+              <a href="#"><b class="fab fa-linkedin-in icon">LinkedIn</b></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sangamfest2023/"><b class="fab fa-google-plus-g icon">Instagram</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

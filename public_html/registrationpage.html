@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="selectcss/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Registration Form</title>
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  display: flex;
+  background-image: url(registrationbg.jpg);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.containerr{
+  max-width: 700px;
+  width: 100%;
+  background-color: #ffffff76;
+  padding: 25px 30px;
+  margin-bottom: 100px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.containerr .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.containerr .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: auto;
+    overflow-y: hidden;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+     </style>
+
+    
+   </head>
+<body>
+  <div class="containerr">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form onsubmit="return false" id="mainForm">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input name="name" type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input name="email" type="text" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input name="phone_number" type="text" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Team name</span>
+            <input name="team_name" id="team_name" type="text" placeholder="Team name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">College name</span>
+            <input name="college_name" type="text" placeholder="College name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Branch</span>
+            <input name="course_name" type="text" placeholder="Branch" required>
+          </div>
+          </div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-7 text-center mb-2">
+                <h4 class="heading-section">Events:</h4>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-4 d-flex justify-content-center align-items-center">
+              <select id="event" name="events" aria-label="Event selection" data-placeholder="Select events" multiple>
+                <!--<option value="Table Tennis" >Sports Event > Table Tennis</option>-->
+                <!--<option value="Badminton">Sports Event > Badminton</option>-->
+                <!--<option value="Three Leg Race">Sports Event >Three Leg Race</option>-->
+                <!--<option value="Sac Race">Sports Event > Sac Race</option>-->
+                <!--<option value="Tug of War">Sports Event > Tug of War</option>-->
+                <!--<option value="Lemon Race">Sports Event > Lemon Race</option>-->
+                <!--<option value="Short Put">Sports Event > Short Put</option>-->
+                <!--<option value="Debugging Contest">Technical Event > Debugging Contest</option>-->
+                <!--<option value="Technical Quiz">Technical Event > Technical Quiz</option>-->
+                <!--<option value="Civil Technomania">Technical Event > Civil Technomania</option>-->
+                <!--<option value="Robo War">Technical Event > Robo War</option>-->
+                <!--<option value="Zunk Management">Technical Event > Zunk Management</option>-->
+                <!--<option value="Logo Designing">Technical Event > Logo Designing</option>-->
+                <!--<option value="CAD Mania">Technical Event > CAD Mania</option>-->
+                <!--<option value="Avishkar">Technical Event > Avishkar</option>-->
+                <!--<option value="War Zone">Technical Event > War Zone</option>-->
+                <!--<option value="Rangoli Competitions">Non-Technical Event > Rangoli Competitions</option>-->
+                <!--<option value="T-shirt Painting">Non-Technical Event > T-shirt Painting</option>-->
+                <!--<option value="Nail-Art Competition">Non-Technical Event > Nail-Art Competition</option>-->
+                <!--<option value="Photography">Non-Technical Event > Photography</option>-->
+                <!--<option value="Short-Film">Non-Technical Event > Short-Film</option>-->
+                <!--<option value="Best Out of Waste">Non-Technical Event > Best Out of Waste</option>-->
+                <!--<option value="Face Painting">Non-Technical Event > Face Painting</option>-->
+                <!--<option value="Poetry/Poem Recitation">Literary Event > Poetry/Poem Recitation</option>-->
+                <!--<option value="Extempore">Literary Event > Extempore</option>-->
+                <!--<option value="SpellBee">Literary Event > SpellBee</option>-->
+                <!--<option value="Spin The Yarn">Literary Event > Spin The Yarn</option>-->
+                <!--<option value="Story Telling">Literary Event > Story Telling</option>-->
+                <!--<option value="Debate">Literary Event > Debate</option>-->
+                <!--<option value="Solo Dance">Cultural Event > Solo Dance</option>-->
+                <!--<option value="Group Dance">Cultural Event > Group Dance</option>-->
+                <!--<option value="Duet Dance">Cultural Event > Duet Dance</option>-->
+                <!--<option value="Solo Singing">Cultural Event > Solo Singing</option>-->
+                <!--<option value="Group Singing">Cultural Event > Group Singing</option>-->
+                <!--<option value="Fashion Show">Cultural Event > Fashion Show</option>-->
+                <!--<option value="Musical Skit">Cultural Event > Musical Skit</option>-->
+                <!--<option value="Nukkad Natak">Cultural Event > Nukkad Natak</option>-->
+                <!--<option value="Mime">Cultural Event > Mime</option>-->
+                <!--<option value="Stand UP Comedy">Cultural Event > Stand UP Comedy</option>-->
+                <!--<option value="Fillers">Cultural Event > Fillers</option>-->
+                <!--<option value="Karaoke">Cultural Event > Karaoke</option>-->
+                <!--<option value="Cacophony">Cultural Event > Cacophony</option>-->
+                <!--<option value="On The Sport Dance">Cultural Event > On The Sport Dance</option>-->
+                <!--<option value="Folk Dance">Cultural Event > Folk Dance</option>-->
+                <!--<option value="Social Awareness Act">Cultural Event > Social Awareness Act</option>-->
+                <!--<option value="Patriotic Act">Cultural Event > Patriotic Act</option>-->
+                <!--<option value="Western Dance">Cultural Event > Western Dance</option>-->
+                <option value="Not Participating">Not Participating > Not Participating</option>
+              </select>
+              </div>
+              </div>
+              </div>
+            <div class="button">
+              <input type="submit" value="Register">
+            </div>
+      </form>
+
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="selectjs/popper.js"></script>
+  <script src="selectjs/bootstrap.min.js"></script>
+  <script src="selectjs/main.js"></script>
+  <script>
+    // Get the main select element
+    var eventSelect = document.getElementById("event");
+    
+    function getFormData($form) {
+        var unindexed_array = $form.serializeArray();
+        var indexed_array = {};
+
+        $.map(unindexed_array, function (n, i) {
+          indexed_array[n['name']] = n['value'];
+        });
+
+        return indexed_array;
+      }
+
+  $("#mainForm").on(
+    "submit",
+    function(e) {
+      let formData = getFormData($('#mainForm'));
+      
+      formData = {
+        "name": formData.name,
+        "email": formData.email,
+        "phone_number": formData.phone_number,
+        "college_name": formData.college_name,
+        "course_name": formData.course_name,
+        "events": $("#event").val(),
+        "team_name": formData.team_name,
+      }
+      $.ajax({
+        type: 'post',
+        url: 'https://api.sangam2023.org/register',
+        data: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        success: function (data) {
+          alert(data.msg);
+        }
+      });
+      e.preventDefault();
+    }
+  )
+
+  $(document).ready(
+    function () {
+      let api_url = "https://api.sangam2023.org/does_team_exist?team_name=";
+
+      // lister for team name check
+      $("#team_name").on('input',
+        function () {
+          let team_name = this.value;
+          if (team_name.length >= 2) {
+            $.getJSON(
+              api_url + team_name,
+              function (data) {
+                if (!data.ok) {
+                  return
+                } else {
+                  alert(data.msg)
+                }
+              },
+            ).fail(
+              function (resp) {
+                if (resp.status != 200) {
+                  alert("API_ERROR")
+                }
+              }
+            )
+          }
+        }
+      )
+
+
+    }
+  )
+  </script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+</body>
+</html>
